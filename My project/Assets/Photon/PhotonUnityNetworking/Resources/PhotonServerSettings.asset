@@ -47,6 +47,15 @@ MonoBehaviour:
   - lose
   - WinGame
   - UpdateLobbyUI
+  - SpawnBullet
+  - Die
+  - DamageFlash
+  - TakeDamage
+  - SpawnPlayer
+  - AddKill
+  - Heal
+  - GiveAmmo
+  - DestroyPickup
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

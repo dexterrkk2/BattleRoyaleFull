@@ -38,6 +38,8 @@ public class menu : MonoBehaviourPunCallbacks, ILobbyCallbacks
 
         if (PhotonNetwork.InRoom)
         {
+            SetScreen(lobbyScreen);
+            UpdateLobbyUI();
             PhotonNetwork.CurrentRoom.IsVisible = true;
             PhotonNetwork.CurrentRoom.IsOpen = true;
         }

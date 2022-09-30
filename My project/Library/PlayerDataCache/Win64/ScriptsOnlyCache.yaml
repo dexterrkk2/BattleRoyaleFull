@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - GameManager
     - Networkmanager
     - PlayerController
     - menu
@@ -160,11 +161,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 3210}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 5494}
+      Script: {instanceID: 5372}
     - Class: 114
-      Script: {instanceID: 5788}
+      Script: {instanceID: 5500}
+    - Class: 114
+      Script: {instanceID: 5794}
+    - Class: 114
+      Script: {instanceID: 8300}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -221,75 +226,79 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 1748}
+      Script: {instanceID: 1752}
     - Class: 114
-      Script: {instanceID: 1824}
+      Script: {instanceID: 1828}
     - Class: 114
-      Script: {instanceID: 2270}
+      Script: {instanceID: 2274}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2744}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3210}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 4104}
+      Script: {instanceID: 4108}
     - Class: 114
-      Script: {instanceID: 4106}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4290}
+      Script: {instanceID: 4294}
     - Class: 114
-      Script: {instanceID: 4420}
+      Script: {instanceID: 4424}
     - Class: 114
-      Script: {instanceID: 4436}
+      Script: {instanceID: 4440}
     - Class: 114
-      Script: {instanceID: 4718}
+      Script: {instanceID: 4722}
     - Class: 114
-      Script: {instanceID: 5302}
+      Script: {instanceID: 5308}
     - Class: 114
-      Script: {instanceID: 5442}
+      Script: {instanceID: 5448}
     - Class: 114
-      Script: {instanceID: 5452}
+      Script: {instanceID: 5458}
     - Class: 114
-      Script: {instanceID: 5468}
+      Script: {instanceID: 5474}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 5500}
     - Class: 114
-      Script: {instanceID: 5936}
+      Script: {instanceID: 5544}
     - Class: 114
-      Script: {instanceID: 5984}
+      Script: {instanceID: 5794}
     - Class: 114
-      Script: {instanceID: 6192}
+      Script: {instanceID: 5942}
     - Class: 114
-      Script: {instanceID: 6346}
+      Script: {instanceID: 5990}
     - Class: 114
-      Script: {instanceID: 6652}
+      Script: {instanceID: 6198}
     - Class: 114
-      Script: {instanceID: 6702}
+      Script: {instanceID: 6352}
     - Class: 114
-      Script: {instanceID: 6714}
+      Script: {instanceID: 6658}
     - Class: 114
-      Script: {instanceID: 6716}
+      Script: {instanceID: 6708}
     - Class: 114
-      Script: {instanceID: 7172}
+      Script: {instanceID: 6720}
     - Class: 114
-      Script: {instanceID: 7356}
+      Script: {instanceID: 6722}
     - Class: 114
-      Script: {instanceID: 7904}
+      Script: {instanceID: 7180}
     - Class: 114
-      Script: {instanceID: 7908}
+      Script: {instanceID: 7364}
     - Class: 114
-      Script: {instanceID: 8292}
+      Script: {instanceID: 7912}
     - Class: 114
-      Script: {instanceID: 8424}
+      Script: {instanceID: 7916}
     - Class: 114
-      Script: {instanceID: 8762}
+      Script: {instanceID: 8300}
+    - Class: 114
+      Script: {instanceID: 8432}
+    - Class: 114
+      Script: {instanceID: 8770}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1181,6 +1190,12 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 54f54134a393f914347488c53cdfbacd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: bullet
+  - hash:
+      serializedVersion: 2
       Hash: 24f79094aff162c9aa69c31d64d777d3
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1229,7 +1244,7 @@ ScriptsOnlyBuild:
     className: Line
   - hash:
       serializedVersion: 2
-      Hash: 974f918e4da5969e206ea849bba00d08
+      Hash: 4c9b7efb4a40a225506c38c24210e4a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1521,6 +1536,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: PlayerNameInputField
+  - hash:
+      serializedVersion: 2
+      Hash: 09672d516e96f22c402cc4f6974114c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerWeapon
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -2011,4 +2032,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: D:/Homework/Game systems 2/M01 DV01/My project/My project.exe
+  playerPath: D:/Homework/Game systems 2/M01 DV01/My project/Build/My project.exe

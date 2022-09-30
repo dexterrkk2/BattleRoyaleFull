@@ -47,6 +47,18 @@ public class Networkmanager : MonoBehaviourPunCallbacks
         Debug.Log("Created room: " + PhotonNetwork.CurrentRoom.Name);
     }
     // instance
-    
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        PhotonNetwork.LoadLevel("menu");
+    }
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        GameManager.instance.alivePlayers--;
+        GameUI.instance.UpdatePlayerInfotext();
 
+        if (PhotonNetwork.IsMasterClient)
+        {
+            GameManager.instance.CheckWinCondition();
+        }
+    }
 }
