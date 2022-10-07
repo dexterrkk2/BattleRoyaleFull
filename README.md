@@ -1,2 +1,2 @@
-WebGl  https://github.com/dexterrkk2/BattleRoyaleWebGl
-Online build https://dexterrkk2.github.io/BattleRoyaleWebGl/
+WebGl   https://dexterrkk2.github.io/WebGl/
+Online build https://github.com/dexterrkk2/WebGl
