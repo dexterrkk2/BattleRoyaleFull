@@ -5,8 +5,9 @@ using Photon.Pun;
 using Photon.Realtime;
 public class PlayerController : MonoBehaviourPunCallbacks
 { 
-    [Header("Info")]
+    [Header("Photon")]
     public int id;
+    public Player photonPlayer;
 
     [Header("Stats")]
     public float moveSpeed;
@@ -14,7 +15,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     [Header("Components")]
     public Rigidbody rig;
-    public Player photonPlayer;
     public PlayerWeapon weapon;
     private int curAttackerId;
     public int curHp;
@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public bool dead;
     private bool flashingDamage;
     public MeshRenderer mr;
+    public portalGun portalGun;
+    public static PlayerController instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     void Move()
     {
         float x = Input.GetAxis("Horizontal");
@@ -54,10 +60,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
         {
             weapon.TryShoot();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            portalGun.TryShoot();
+        }
     }
     [PunRPC]
     public void Initialize(Player player)
     {
+        photonPlayer = player;
         //photonPlayer = player;
         id = player.ActorNumber;
         GameManager.instance.players[id - 1] = this;
@@ -137,10 +148,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
 
             GetComponentInChildren<CameraController>().SetAsSpectator();
-
             rig.isKinematic = true;
             transform.position = new Vector3(0, -50, 0);
         }
+        GameManager.instance.GetPlayer(curAttackerId).photonView.RPC("GiveAmmo", GameManager.instance.GetPlayer(curAttackerId).photonPlayer, weapon.curAmmo);
     }
     [PunRPC]
     public void AddKill()

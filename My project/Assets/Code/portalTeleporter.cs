@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class portalTeleporter : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class portalTeleporter : MonoBehaviour
     public Transform otherPortal;
     public Collider playercheck;
     public Vector3 portaloffset;
+    public Camera teleportCamera;
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +25,7 @@ public class portalTeleporter : MonoBehaviour
                         rotationDiff += 180;
                         player.transform.Rotate(Vector3.up, rotationDiff);
                         Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
-                        player.transform.position = otherPortal.position + positionOffset -portaloffset;
+                        player.transform.position = otherPortal.position + positionOffset +portaloffset;
                         playerIsOverlapping = false;
                     }
                 }
@@ -32,15 +34,16 @@ public class portalTeleporter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "bullet")
         {
             playerIsOverlapping = true;
             playercheck = other;
         }
+        
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "bullet")
         {
             playerIsOverlapping = false;
         }

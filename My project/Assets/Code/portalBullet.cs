@@ -7,7 +7,9 @@ public class portalBullet : MonoBehaviour
     private int attackerId;
     private bool isMine;
     public Rigidbody rig;
-    public GameObject portal;
+    public GameObject portalParent;
+    public int portalOrder;
+    public Vector3 groundOffset;
     public void Initialize(int attackerId, bool isMine)
     {
         this.attackerId = attackerId;
@@ -15,12 +17,47 @@ public class portalBullet : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        // did we hit a player?
-        // if this is the local player's bullet, damage the hit player
-        // we're using client side hit detection
-        if (isMine)
+        if (isMine && other.CompareTag("ground"))
         {
-            GameObject bulletObj = Instantiate(portal,  transform.position, Quaternion.identity);
+            if (GameManager.instance.portalOrder >= 1)
+            {
+                if (GameManager.instance.portalOrder % 2 == 0)
+                {
+                    
+                    portal.instance.portal1.transform.position = transform.position + groundOffset;
+                    GameManager.instance.portalOrder++;
+                }
+                else
+                {
+                    portal.instance.portal2.SetActive(true);
+                    portal.instance.portal2.transform.position = transform.position + groundOffset;
+                    GameManager.instance.portalOrder++;
+                }
+            }
+            else
+            {
+                Instantiate(portalParent, transform.position + groundOffset, other.transform.rotation);
+            }
+        }
+        else if (isMine && other.CompareTag("wall"))
+        {
+            if (GameManager.instance.portalOrder >= 1)
+            {
+                if (GameManager.instance.portalOrder % 2 == 0)
+                {
+                    portal.instance.portal1.transform.position = transform.position;
+                    GameManager.instance.portalOrder++;
+                }
+                else
+                {
+                    portal.instance.portal2.transform.position = transform.position;
+                    GameManager.instance.portalOrder++;
+                }
+            }
+            else
+            {
+                Instantiate(portalParent, transform.position, other.transform.rotation);
+            }
         }
         Destroy(gameObject);
     }

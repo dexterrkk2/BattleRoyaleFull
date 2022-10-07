@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8766982822703743977}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8766982822703743978}
-  m_LocalRotation: {x: -0, y: 0.6849948, z: -0, w: 0.728548}
-  m_LocalPosition: {x: 4.12, y: 2.25, z: 9.5}
-  m_LocalScale: {x: 1, y: 1, z: 0.100000024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8766982822978668781}
@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fbdca91d2f6dc4bbaa5c4f1f7ed55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal2: {fileID: 8766982824245147234}
+  portal1: {fileID: 8766982822978668780}
 --- !u!114 &8766982822703743974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,11 +89,11 @@ GameObject:
   - component: {fileID: 8766982822978668781}
   - component: {fileID: 8766982822978668776}
   - component: {fileID: 8766982822978668779}
-  - component: {fileID: 8766982822978668778}
   - component: {fileID: 8766982822978668777}
+  - component: {fileID: 4299135035629105007}
   m_Layer: 0
   m_Name: Portal 1
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,20 +165,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8766982822978668778
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766982822978668780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8292377
-  m_Height: 2.6144872
-  m_Direction: 1
-  m_Center: {x: -0.25482795, y: -0.26675534, z: 32.36654}
 --- !u!114 &8766982822978668777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +180,22 @@ MonoBehaviour:
   playerIsOverlapping: 0
   otherPortal: {fileID: 8766982824245147235}
   playercheck: {fileID: 0}
-  portaloffset: {x: 0, y: 0, z: 0}
+  portaloffset: {x: 3, y: 0, z: 3}
+  teleportCamera: {fileID: 8766982823919907603}
+--- !u!136 &4299135035629105007
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8766982822978668780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.72046167
+  m_Height: 2.96153
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: -0.108207345, z: 6.677211}
 --- !u!1 &8766982823181670450
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +209,7 @@ GameObject:
   - component: {fileID: 8766982823181670446}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,8 +222,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8766982823181670450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0, z: -0}
-  m_LocalScale: {x: 109.02466, y: 1, z: 1.0052825}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1.0052825}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8766982822978668781}
@@ -298,7 +301,7 @@ GameObject:
   - component: {fileID: 8766982823225425556}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,8 +314,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8766982823225425558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.032, y: 0, z: -4.1}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1687, y: 1.068764, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8766982822978668781}
@@ -396,7 +399,7 @@ GameObject:
   - component: {fileID: 8766982823605843602}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,8 +412,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8766982823605843604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0, z: -6}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1951, y: 1.0566, z: 0.005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8766982824245147235}
@@ -493,7 +496,7 @@ GameObject:
   - component: {fileID: 8766982823919907600}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -506,7 +509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8766982823919907604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 99.409615, y: 1, z: 1.0037837}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -582,15 +585,15 @@ GameObject:
   - component: {fileID: 8766982824245147235}
   - component: {fileID: 8766982824245147551}
   - component: {fileID: 8766982824245147550}
-  - component: {fileID: 8766982824245147233}
   - component: {fileID: 8766982824245147548}
+  - component: {fileID: 1445187363103505444}
   m_Layer: 0
   m_Name: Portal2
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8766982824245147235
 Transform:
   m_ObjectHideFlags: 0
@@ -658,20 +661,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8766982824245147233
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766982824245147234}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.85366344
-  m_Height: 2.684533
-  m_Direction: 1
-  m_Center: {x: -0.08010785, y: -0.06361985, z: 22.294668}
 --- !u!114 &8766982824245147548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,4 +676,19 @@ MonoBehaviour:
   playerIsOverlapping: 0
   otherPortal: {fileID: 8766982822978668781}
   playercheck: {fileID: 0}
-  portaloffset: {x: 0, y: 0, z: 0}
+  portaloffset: {x: 3, y: 0, z: 3}
+  teleportCamera: {fileID: 8766982823181670449}
+--- !u!136 &1445187363103505444
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8766982824245147234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.73504037
+  m_Height: 2.8058481
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: -0.09521651, z: 6.6200867}

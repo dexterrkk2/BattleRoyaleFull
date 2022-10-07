@@ -20,14 +20,14 @@ public class portalGun : MonoBehaviour
     }
     public void TryShoot()
     {
+        if (Time.time - lastShootTime < shootRate)
+            return;
         lastShootTime = Time.time;
-        // update the ammo UI
-        GameUI.instance.UpdateAmmoText();
         // spawn the bullet
-        player.photonView.RPC("SpawnBullet", RpcTarget.All, bulletSpawnPos.transform.position, Camera.main.transform.forward);
+        player.photonView.RPC("SpawnPortal", RpcTarget.All, bulletSpawnPos.transform.position, Camera.main.transform.forward);
     }
     [PunRPC]
-    void SpawnBullet(Vector3 pos, Vector3 dir)
+    void SpawnPortal(Vector3 pos, Vector3 dir)
     {
         // spawn and orientate it
         GameObject bulletObj = Instantiate(bulletPrefab, pos, Quaternion.identity);

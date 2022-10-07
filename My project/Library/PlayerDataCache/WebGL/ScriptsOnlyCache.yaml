@@ -11,6 +11,12 @@ ScriptsOnlyBuild:
     - PlayerWeapon
     - bullet
     - menu
+    - portal
+    - portalBullet
+    - portalCamera
+    - portalGun
+    - portalTeleporter
+    - portalTextureSetup
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -37,6 +43,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -162,29 +169,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2742}
+    - Class: 114
+      Script: {instanceID: 2752}
     - Class: 114
       Script: {instanceID: 2982}
     - Class: 114
       Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5448}
+      Script: {instanceID: 5452}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 6198}
+      Script: {instanceID: 5958}
     - Class: 114
-      Script: {instanceID: 6352}
+      Script: {instanceID: 6206}
     - Class: 114
-      Script: {instanceID: 6708}
+      Script: {instanceID: 6360}
     - Class: 114
-      Script: {instanceID: 79626}
+      Script: {instanceID: 6452}
     - Class: 114
-      Script: {instanceID: 92692}
-    - Class: 114
-      Script: {instanceID: 96296}
+      Script: {instanceID: 6720}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -194,6 +201,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -232,6 +241,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -249,15 +260,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1664}
+      Script: {instanceID: 1660}
     - Class: 114
-      Script: {instanceID: 1752}
+      Script: {instanceID: 1748}
     - Class: 114
-      Script: {instanceID: 1828}
+      Script: {instanceID: 1780}
     - Class: 114
-      Script: {instanceID: 2274}
+      Script: {instanceID: 1826}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2742}
     - Class: 114
       Script: {instanceID: 2910}
     - Class: 114
@@ -267,65 +280,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 4108}
+      Script: {instanceID: 3794}
+    - Class: 114
+      Script: {instanceID: 3916}
     - Class: 114
       Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4294}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4424}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4440}
+      Script: {instanceID: 4426}
     - Class: 114
-      Script: {instanceID: 4722}
+      Script: {instanceID: 4442}
     - Class: 114
-      Script: {instanceID: 5238}
+      Script: {instanceID: 4724}
     - Class: 114
-      Script: {instanceID: 5308}
+      Script: {instanceID: 4822}
     - Class: 114
-      Script: {instanceID: 5448}
+      Script: {instanceID: 5242}
     - Class: 114
-      Script: {instanceID: 5458}
+      Script: {instanceID: 5312}
     - Class: 114
-      Script: {instanceID: 5474}
+      Script: {instanceID: 5452}
     - Class: 114
-      Script: {instanceID: 5500}
+      Script: {instanceID: 5462}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5478}
     - Class: 114
-      Script: {instanceID: 5794}
+      Script: {instanceID: 5504}
     - Class: 114
-      Script: {instanceID: 5942}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 5990}
+      Script: {instanceID: 5798}
     - Class: 114
-      Script: {instanceID: 6198}
+      Script: {instanceID: 5946}
     - Class: 114
-      Script: {instanceID: 6352}
+      Script: {instanceID: 5996}
     - Class: 114
-      Script: {instanceID: 6658}
+      Script: {instanceID: 6190}
     - Class: 114
-      Script: {instanceID: 6708}
+      Script: {instanceID: 6206}
+    - Class: 114
+      Script: {instanceID: 6360}
+    - Class: 114
+      Script: {instanceID: 6522}
+    - Class: 114
+      Script: {instanceID: 6670}
     - Class: 114
       Script: {instanceID: 6720}
     - Class: 114
-      Script: {instanceID: 6722}
+      Script: {instanceID: 6732}
     - Class: 114
-      Script: {instanceID: 6816}
+      Script: {instanceID: 6734}
     - Class: 114
-      Script: {instanceID: 7180}
+      Script: {instanceID: 6828}
     - Class: 114
-      Script: {instanceID: 7364}
+      Script: {instanceID: 7192}
     - Class: 114
-      Script: {instanceID: 7912}
+      Script: {instanceID: 7376}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 7924}
     - Class: 114
-      Script: {instanceID: 8300}
+      Script: {instanceID: 7928}
     - Class: 114
-      Script: {instanceID: 8432}
+      Script: {instanceID: 8014}
     - Class: 114
-      Script: {instanceID: 8770}
+      Script: {instanceID: 8314}
+    - Class: 114
+      Script: {instanceID: 8446}
+    - Class: 114
+      Script: {instanceID: 8784}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -441,6 +466,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
     className: PlayerOverviewPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 1890b10ca9bb62d7c12a2f6d23e11a29
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: portalBullet
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -615,6 +646,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: d03e45c4f1cd0b9f049d53b1ceeb5e57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameUI
   - hash:
       serializedVersion: 2
       Hash: fe64a45214940b510a0ec79c96d43498
@@ -917,6 +954,12 @@ ScriptsOnlyBuild:
     className: SetRoomCustomPropertyUIForm
   - hash:
       serializedVersion: 2
+      Hash: d7e06dc92027c1068e5e7123a3f7bd75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: portal
+  - hash:
+      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.Flow.dll
     namespaceName: Unity.VisualScripting
@@ -1127,6 +1170,12 @@ ScriptsOnlyBuild:
     className: ToggleExpand
   - hash:
       serializedVersion: 2
+      Hash: 9866ed70e64a82768f4ae4edcde2d35d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: portalTeleporter
+  - hash:
+      serializedVersion: 2
       Hash: d2a2698b314a20912af1eb2b1758dc90
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1271,7 +1320,7 @@ ScriptsOnlyBuild:
     className: Line
   - hash:
       serializedVersion: 2
-      Hash: cf1999e1c3bd1a2d1e32733f3cdd70af
+      Hash: 0e862a6f9baac1995899b322b212b0fd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1319,7 +1368,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionEnter2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 82dfa79483ca190d23ce808a9b1ecd2d
+      Hash: e038de0f9e440f69b225514356ac4e9e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1409,6 +1458,12 @@ ScriptsOnlyBuild:
     className: PlayerControl
   - hash:
       serializedVersion: 2
+      Hash: 94b2f6224f8b1f503559c9f94e20b7d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pickup
+  - hash:
+      serializedVersion: 2
       Hash: 37b66d97ccef5607e80037acafe51b3b
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.SlotRacer.Utils
@@ -1451,6 +1506,12 @@ ScriptsOnlyBuild:
     className: PlayerListCell
   - hash:
       serializedVersion: 2
+      Hash: bf727b2ea4b516b01c631690805a3783
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: portalTextureSetup
+  - hash:
+      serializedVersion: 2
       Hash: f941c3a384168571b7d90f58ec4986bc
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1487,10 +1548,22 @@ ScriptsOnlyBuild:
     className: RoomListView
   - hash:
       serializedVersion: 2
+      Hash: f14df5e1c0f68caabd577304b7cb808a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Forcefeild
+  - hash:
+      serializedVersion: 2
       Hash: 267e1e00a8f1d106bd614339db235595
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: PunCockpit
+  - hash:
+      serializedVersion: 2
+      Hash: 09cdbabf01abb10dc702d88c7ffa6b19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: portalCamera
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1859,6 +1932,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 20e884e42c455187f96e2b08900d8aaf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: portalGun
+  - hash:
+      serializedVersion: 2
       Hash: 8ae3331b163cc121825eeed3975d6c4d
     assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Chat.Demo
@@ -2055,24 +2134,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: f14df5e1c0f68caabd577304b7cb808a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Forcefeild
-  - hash:
-      serializedVersion: 2
-      Hash: 94b2f6224f8b1f503559c9f94e20b7d2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Pickup
-  - hash:
-      serializedVersion: 2
-      Hash: d03e45c4f1cd0b9f049d53b1ceeb5e57
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameUI
   platform: 20
   scenePathNames:
   - Assets/Scenes/Menu.unity

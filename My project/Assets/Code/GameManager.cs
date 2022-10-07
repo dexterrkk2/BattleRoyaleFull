@@ -16,10 +16,16 @@ public class GameManager : MonoBehaviourPunCallbacks
     private int playersInGame; // number of players in the game
     // instance
     public static GameManager instance;
+    public List<GameObject> portals;
+    public int portalOrder;
     void Awake()
     {
         // instance
         instance = this;
+    }
+    private void Update()
+    {
+       
     }
     // Start is called before the first frame update
     void Start()

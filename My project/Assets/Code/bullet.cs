@@ -27,7 +27,10 @@ public class bullet : MonoBehaviour
             if (player.id != attackerId)
                 player.photonView.RPC("TakeDamage", player.photonPlayer, attackerId, damage);
         }
-        Destroy(gameObject);
+        if (!other.CompareTag("portal"))
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

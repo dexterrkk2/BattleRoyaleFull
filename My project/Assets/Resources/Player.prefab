@@ -247,6 +247,7 @@ MonoBehaviour:
   kills: 0
   dead: 0
   mr: {fileID: 2257531650546504874}
+  portalGun: {fileID: 690772886700831959}
 --- !u!114 &2257531650546504878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,9 +319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 30
-  shootRate: 1
-  bulletPrefab: {fileID: 0}
-  bulletSpawnPos: {fileID: 0}
+  shootRate: 0.25
+  bulletPrefab: {fileID: 411959942708186732, guid: 0fa34a7e1ac820f4c9d858d8234a27cf, type: 3}
+  bulletSpawnPos: {fileID: 132486485947557050}
 --- !u!1 &3708682487207822196
 GameObject:
   m_ObjectHideFlags: 0
